@@ -52,6 +52,8 @@ npx hexo generate
 
 cd $TARGET_PUBLISH_DIR
 
+echo "uxss.net" > CNAME
+
 echo ">>> Config git ..."
 
 # Configures Git.
