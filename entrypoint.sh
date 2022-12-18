@@ -36,8 +36,8 @@ echo ">>>>> Start deploy to ${TARGET_REPOSITORY} <<<<<"
 # Installs Git.
 echo ">>> Install Git ..."
 apt-get update && \
-apt-get install -y git && \
 apt-get upgrade -y && \
+apt-get install -y git && \
 
 # Directs the action to the the Github workspace.
 cd "${GITHUB_WORKSPACE}"
@@ -58,9 +58,10 @@ echo "uxss.net" > CNAME
 echo ">>> Config git ..."
 
 # Configures Git.
+
 git init
-git config user.name "${GITHUB_ACTOR}"
-git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+git config --global user.name "${GITHUB_ACTOR}"
+git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git remote add origin "${REPOSITORY_PATH}"
 
 git checkout --orphan $TARGET_BRANCH
