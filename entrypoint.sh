@@ -62,7 +62,7 @@ echo ">>> Config git ..."
 git init
 git config --global user.name "${GITHUB_ACTOR}"
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-git config --global --add safe.directory /github/workspace/public
+git config --global --add safe.directory "${GITHUB_WORKSPACE}"
 git remote add origin "${REPOSITORY_PATH}"
 
 git checkout --orphan $TARGET_BRANCH
