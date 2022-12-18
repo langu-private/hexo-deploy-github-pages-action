@@ -62,7 +62,8 @@ echo ">>> Config git ..."
 git init
 git config --global user.name "${GITHUB_ACTOR}"
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-git config --global --add safe.directory $TARGET_PUBLISH_DIR
+mydir=`pwd`
+git config --global --add safe.directory $mydir
 git remote add origin "${REPOSITORY_PATH}"
 
 git checkout --orphan $TARGET_BRANCH
