@@ -53,7 +53,7 @@ npx hexo generate
 
 cd $TARGET_PUBLISH_DIR
 
-echo "uxss.net" > CNAME
+echo "blog.langu.xyz" > CNAME
 
 echo ">>> Config git ..."
 
